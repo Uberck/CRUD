@@ -27,6 +27,18 @@ namespace CRUDweb.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Lookup(EmployeeModel model)
+        {
+            if (ModelState.IsValid)
+
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
         // other buttons commented out for now
         //public IActionResult Contact()
         //{
