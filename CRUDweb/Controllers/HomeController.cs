@@ -18,21 +18,27 @@ namespace CRUDweb.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
+        
             return View();
         }
-
-        public IActionResult Contact()
+        public IActionResult Lookup()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Search for employee by lastname";
 
             return View();
         }
+        // other buttons commented out for now
+        //public IActionResult Contact()
+        //{
+        //    ViewData["Message"] = "Your contact page.";
+        //
+        //   return View();
+        //}
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        //public IActionResult Privacy()
+        //{
+        //    return View();
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
