@@ -1,27 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using System.Data.SqlClient;
+using System.Configuration;
 using System.Data;
-using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
 
-namespace CRUDweb.Models
+
+namespace CRUDweb.DataAccess
 {
-    public class DataAccess
+    public static class SQLDataAccess
     {
-        private readonly IConfiguration Configuration;
-        public DataAccess(IConfiguration configuration)
+        public static string GetConnectionString(string connectionName = "MassDBString")
         {
-            this.Configuration = configuration;
+            return ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
         }
-
-        public IDbConnection GetDapperConnection()
+        public static T LoadData<T>(string sql)
         {
-            string connectionString = Configuration.GetConnectionString("MassDBString");
-            IDbConnection dbConnection = new SqlConnection(connectionString);
-            return dbConnection;
+            using (IDbConnection cnn = new SqlConnection(GetConnectionString()))
+            {
+                return cnn.Query<T>;
+            }
+
 
         }
     }
