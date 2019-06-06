@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace CRUDweb.DataAccess
+namespace CRUDweb.Models
 {
     public class EmployeeModel
     {

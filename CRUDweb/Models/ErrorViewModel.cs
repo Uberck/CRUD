@@ -1,6 +1,6 @@
 using System;
 
-namespace CRUDweb.DataAccess
+namespace CRUDweb.Models
 {
     public class ErrorViewModel
     {

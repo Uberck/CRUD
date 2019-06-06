@@ -13,18 +13,18 @@ namespace CRUDweb.DataAccess
 {
     public static class SQLDataAccess
     {
-        public static string GetConnectionString(string connectionName = "MassDBString")
-        {
-            return ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
-        }
-        public static T LoadData<T>(string sql)
-        {
-            using (IDbConnection cnn = new SqlConnection(GetConnectionString()))
-            {
-                return cnn.Query<T>;
-            }
+//        public static string GetConnectionString(string connectionName = "MassDBString")
+//        {
+//            return ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
+//        }
+//        public static T LoadData<T>(string sql)
+//        {
+//            using (IDbConnection cnn = new SqlConnection(GetConnectionString()))
+//            {
+//                return cnn.Query<T>;
+//            }
 
 
-        }
+//        }
     }
 }

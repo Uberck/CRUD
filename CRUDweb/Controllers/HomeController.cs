@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using CRUDweb.DataAccess;
+using CRUDweb.Models;
 
 namespace CRUDweb.Controllers
 {

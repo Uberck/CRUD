@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CRUDweb.DataAccess
 {
-    public class EmployeeModel
+    public class EmployeeModelSQL
     {
         public int ID { get; set; }
         public int EmployeeID { get; set; }
